@@ -192,21 +192,6 @@ fun footerArea() {
     Footer(attrs = { classes("footer") }) {
         Div(attrs = { classes("footer_top") }) {
             Div(attrs = { classes("container") }) {
-
-                Div(attrs = { classes("row", "justify-content-center") }) {
-                    Div(attrs = { classes("col-lg-6") }) {
-                        Div(attrs = { classes("section_title", "text-center", "mb_70") }) {
-                            H3 {
-                                Text("Current available rides")
-                            }
-                            P {
-                                Text("Pick one of the available rides.")
-                            }
-                        }
-                    }
-                }
-
-
                 Div(attrs = { classes("row") }) {
                     Div(attrs = { classes("col-xl-4", "col-md-6", "col-lg-4") }) {
                         Div(attrs = { classes("footer_widget") }) {
@@ -225,10 +210,14 @@ fun footerArea() {
                                 }
                             }
                             P {
-                                Text("Colombo, Sri Lanka\ncontact@jumpseat.company")
+                                Text("Colombo, Sri Lanka")
+                            }
+                            P {
+                                Text(" contact@jumpseat.company")
                             }
                         }
                     }
+
                     Div(attrs = { classes("col-xl-2", "col-md-6", "col-lg-2") }) {
                         Div(attrs = { classes("footer_widget") }) {
                             H3(attrs = { classes("footer_title") }) {
@@ -273,6 +262,18 @@ fun availableTrips(ridesResponse: RidesResponse) {
 
     Div(attrs = { classes("popular_places_area") }) {
         Div(attrs = { classes("container") }) {
+            Div(attrs = { classes("row", "justify-content-center") }) {
+                Div(attrs = { classes("col-lg-6") }) {
+                    Div(attrs = { classes("section_title", "text-center", "mb_70") }) {
+                        H3 {
+                            Text("Current available rides")
+                        }
+                        P {
+                            Text("Pick one of the available rides.")
+                        }
+                    }
+                }
+            }
             Div(attrs = { classes("row") }) {
                 Div(attrs = { classes("col") }) {
                     Div(attrs = { classes("row") }) {
@@ -282,8 +283,8 @@ fun availableTrips(ridesResponse: RidesResponse) {
                                     Div(attrs = { classes("thumb") }) {
                                         Img(src = randomImages.random(), alt = "") {
                                             style {
-                                                width(250.px)
-                                                height(250.px)
+                                                width(480.px)
+                                                height(480.px)
                                             }
                                         }
                                         A(href = "#", attrs = { classes("prise") }) {
